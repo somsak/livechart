@@ -1,0 +1,76 @@
+<script language="JavaScript">
+ function getFlashMovie(movieName) {
+  var isIE = navigator.appName.indexOf("Microsoft") != -1;
+  return (isIE) ? window[movieName] : document[movieName];
+ }
+ function updating() 
+ {
+  	var xml = "<graph caption='Araya Server' xAxisName='Time' yAxisName='Use (%)'><set label='CPU1' value='5' color='0x6031CE'/><set label='CPU2' value='50' color='0xFF9933'/><set label='CPU3' value='90' color='0xCC0000'/></graph>";	
+	  getFlashMovie("flash1").update(xml);
+	  getFlashMovie("flash2").update(xml);
+	  getFlashMovie("flash3").update(xml);
+	  getFlashMovie("flash4").update(xml);
+ }
+ 
+ function interval()
+ {
+	 var url 	= "http://araya.thaigrid.or.th/~trainee6/Data.php";
+	 getFlashMovie("flash1").setConfig("line");
+	 getFlashMovie("flash2").setConfig("column");
+	 getFlashMovie("flash3").setConfig("pie");
+ 	 getFlashMovie("flash4").setConfig("column3d");
+ 	 setInterval("updating()",1000);
+ }
+</script>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Sample</title>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: large;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body onLoad="javascript:interval();">
+<table width="1116" border="0" align="center">
+  <tr>
+    <td><div align="center" class="style1">SAMPLE</div></td>
+  </tr>
+</table>
+<p>&nbsp;  </p>
+  <table width="200" border="1">
+    <tr>
+      <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="550" height="400" name="flash1" id="flash1">
+        <param name="movie" value="Graphs2.swf" />
+        <param name="quality" value="high" />
+        <embed src="Graphs2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="400"></embed>
+      </object></td>
+      <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="550" height="400" name="flash2" id="flash2">
+        <param name="movie" value="Graphs2.swf" />
+        <param name="quality" value="high" />
+        <embed src="Graphs2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="400"></embed>
+      </object></td>
+    </tr>
+    <tr>
+      <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="550" height="400" name="flash3" id="flash3">
+        <param name="movie" value="Graphs2.swf" />
+        <param name="quality" value="high" />
+        <embed src="Graphs2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="400"></embed>
+      </object></td>
+      <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="550" height="400" name="flash4" id="flash4">
+        <param name="movie" value="Graphs2.swf" />
+        <param name="quality" value="high" />
+        <embed src="Graphs2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="400"></embed>
+      </object></td>
+    </tr>
+  </table>
+</body>
+</html>

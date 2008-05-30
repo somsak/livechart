@@ -1,0 +1,5 @@
+<graph caption='Araya Server' xAxisName='Time' yAxisName='Use (%)'>
+	<set label='CPU1' value='5' color='0x6031CE'/>
+	<set label='CPU2' value='50' color='0xFF9933'/>
+	<set label='CPU3' value='90' color='0xCC0000'/>
+</graph>
